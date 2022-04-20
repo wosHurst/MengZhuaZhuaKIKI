@@ -1,0 +1,11 @@
+<view id="userInfo">
+  <view class="header">
+    <image bind:tap="chooseMedia" class="img" src="{{ showAvatarUrl }}" />
+  </view>
+
+  <van-cell-group>
+    <van-field model:value="{{ nickName }}" label="昵称" placeholder="请输入用户名" input-align="right" />
+  </van-cell-group>
+
+  <van-button bind:tap="submit" block round class="btn" color="#ff6034"> 修改信息 </van-button>
+</view>

@@ -1,0 +1,6 @@
+/* 小程序公共样式表 */
+Page{
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+}

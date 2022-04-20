@@ -1,0 +1,15 @@
+<view id="mineLike">
+  <view wx:if="{{ userInfo }}">
+    <view class="tab">
+      <van-button icon="{{ ageSort === 'desc' ? 'arrow-down' : 'arrow-up' }}" wx:key="index" round type="info" size="small" color="#ff6034" bind:tap="changeSort">年龄</van-button>
+    </view>
+    <view wx:if="{{ animalLikeList.length > 0 }}">
+      <ani-card wx:for="{{ animalLikeList }}" wx:key="index" animalData="{{ item }}">
+        <van-icon color="#ff6034" slot="icon" name="medal-o" />
+        <van-tag plain round slot="tag" color="#ff6034">{{ item.age }}个月</van-tag>
+      </ani-card>
+    </view>
+    <van-empty wx:else style="text-align: center;" description="还未关注任何宠物" />
+  </view>
+  <van-empty wx:else style="text-align: center;" image="error" description="登录后查看关注信息" />
+</view>

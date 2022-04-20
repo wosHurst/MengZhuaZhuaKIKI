@@ -1,0 +1,22 @@
+<view id="pay">
+  <view class="header">
+    <van-image round width="4rem" height="4rem" src="{{animalInfo.avatarUrl[0]}}" />
+
+    <view class="header-left">
+      <view class="header-left-title">
+        {{ animalInfo.title }}
+        <van-tag plain round slot="tag" type="primary" style="margin-right:10rpx;">{{ animalInfo.varieties }}</van-tag>
+        <van-tag plain round slot="tag" color="#ff6034">{{ animalInfo.age }}个月</van-tag>
+      </view>
+      <view class="header-left-text">我急需的物品[ 猫粮狗粮小玩具 ]</view>
+    </view>
+  </view>
+
+  <view style="margin-top: 20rpx;background: #fff;">
+    <ani-goods-card bind:setCheckedNum="setCheckedNum" wx:for="{{ goodsList }}" wx:key="index" goodsData="{{ item }}" />
+  </view>
+
+  <van-submit-bar price="{{ totalPrice }}" button-text="提交订单" bind:submit="pay" tip="{{ true }}">
+    <radio bind:tap="changeChecked" checked="{{ checked }}" color="#ff6034" />全选
+  </van-submit-bar>
+</view>

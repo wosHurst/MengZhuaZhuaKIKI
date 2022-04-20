@@ -1,0 +1,17 @@
+<view id="cloudRalse">
+  <view wx:if="{{ userInfo }}">
+    <view class="tab">
+      <van-search model:value="{{ text }}" placeholder="请输入搜索关键词" use-action-slot bind:search="getRalseList">
+        <view slot="action" bind:tap="getRalseList">搜索</view>
+      </van-search>
+    </view>
+    <view wx:if="{{ animalList.length > 0 }}">
+      <ani-card wx:for="{{ animalList }}" wx:key="index" animalData="{{ item }}">
+        <van-icon color="#ff6034" slot="icon" name="medal-o" />
+        <van-tag plain round slot="tag" color="#ff6034">{{ item.age }}个月</van-tag>
+      </ani-card>
+    </view>
+    <van-empty wx:else style="text-align: center;" description="暂无运养数据" />
+  </view>
+  <van-empty wx:else style="text-align: center;" image="error" description="登录后查看云养信息" />
+</view>

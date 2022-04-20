@@ -1,0 +1,51 @@
+#animalInfo{
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+}
+
+.swiper{
+  width: 100%;
+  height: 620rpx;
+}
+
+.swiper-item-image{
+  height: 100%;
+  width: 100%;
+}
+
+.header{
+  margin: 20rpx 0;
+  padding: 20rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-title{
+  font-size: 38rpx;
+}
+
+.header-btn> .van-button{
+ background: none;
+ border: 0rpx;
+ height: 30rpx;
+}
+
+.info-card{
+  box-sizing: border-box;
+  width: calc(100% - 40rpx);
+  box-shadow: 0 4rpx 24rpx 0 rgb(0 0 0 / 10%);
+  border-radius: 10rpx;
+  margin: 0 auto;
+  height: 200rpx;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding-left: 20rpx;
+}
+
+.info-card>view{
+  width: calc(100% / 3);
+}

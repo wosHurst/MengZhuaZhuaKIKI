@@ -1,0 +1,16 @@
+<view class="card" bind:tap="toInfo">
+  <image class="card-left" src="{{ animalData.avatarUrl[0] }}" />
+  <view class="card-right">
+    <view class="card-right-title">
+      <slot name='icon'></slot>
+      {{ animalData.title }}
+      <slot name='tag'></slot>
+    </view>
+    <view class="card-right-text">{{ animalData.introduction }}</view>
+    <view class="card-right-tag">
+      <van-tag class="card-right-tag-item" round type="primary">{{ immune ? '已' : '未'}}免疫</van-tag>
+      <van-tag class="card-right-tag-item" round type="success">{{insectRepellent ? '已' : '未'}}驱虫</van-tag>
+      <van-tag class="card-right-tag-item" round type="warning">{{sterilization? '已' : '未'}}绝育</van-tag>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "萌爪爪KIKI领养中心",
+  "navigationBarTextStyle": "white",
+  "navigationBarBackgroundColor": "#ff6034",
+  "usingComponents": {
+    "van-button": "@vant/weapp/button/index",
+    "ani-card": "../../components/card/index"
+  }
+}

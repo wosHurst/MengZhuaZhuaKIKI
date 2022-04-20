@@ -1,0 +1,30 @@
+#pay{
+  width: 100%;
+  height: auto;
+  background: #e6e6e6;
+  margin-bottom: 100rpx;
+}
+
+.header{
+  background: #fff;
+  display: flex;
+  align-items: center;
+  padding: 20rpx;
+}
+
+.header-left{
+  box-sizing: border-box;
+  padding-left: 20rpx;
+}
+
+.header-left-title{
+  font-size: 34rpx;
+}
+
+.header-left-text{
+  font-size: 28rpx;
+  color: rgb(155, 155, 155);
+  margin-top: 10rpx;
+}
+
+

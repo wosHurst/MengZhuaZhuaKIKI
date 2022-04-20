@@ -1,0 +1,19 @@
+<view id="home">
+  <scroll-view scroll-y="{{true}}" refresher-triggered="{{triggered}}" style="height:{{windowHeight}}px" bind:scrolltolower="scrolltolower" refresher-enabled="{{true}}" bind:refresherrefresh="refresherrefresh">
+    <swiper indicator-dots="{{ true }}" indicator-color="rgba(255,255,255, 0.4)" indicator-active-color="#ff6034" previous-margin="40rpx" next-margin="40rpx" circular="{{ true }}">
+      <block wx:for="{{ swiper }}" wx:key="*this">
+        <swiper-item class="swiper-item">
+          <image src="{{ item }}"></image>
+        </swiper-item>
+      </block>
+    </swiper>
+
+    <view class="tab">
+      <van-button wx:for="{{tabList}}" wx:key="index" class="tab-item" round type="info" size="small" color="{{ active === item.id ? '#ff6034' : '#ccc'}}" data-id="{{ item.id }}" bind:tap="setActive">{{ item.title }}</van-button>
+    </view>
+
+    <view class="content">
+      <ani-card wx:for="{{ animalList }}" wx:key="index" animalData="{{ item }}"></ani-card>
+    </view>
+  </scroll-view>
+</view>
